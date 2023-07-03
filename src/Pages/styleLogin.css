@@ -1,11 +1,9 @@
 .bg1 {
-    background-image: url('https://images.pexels.com/photos/4028822/pexels-photo-4028822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
-    background-size: cover;
-    background-position: absolute;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* height: full;
+  background-image: url("https://images.pexels.com/photos/4028822/pexels-photo-4028822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* height: full;
     width: full; */
-  }
-
-  
+}
