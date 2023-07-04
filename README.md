@@ -16,4 +16,4 @@ The outcome here is to collaburate with the teammates and solve the solution as 
 The task duration will be discussed with the Technical expert and will be implemented accordingly.
 
 
-Any confusions will be addressed by the Technical expert
+Any confusions will be addressed by the Technical expert 

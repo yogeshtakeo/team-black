@@ -42,7 +42,8 @@ function LoginPage() {
             <Formik
               initialValues={initialValues}
               onSubmit={submitHandler}
-              validationSchema={validationSchema}>
+              validationSchema={validationSchema}
+            >
               <Form className="bg-slate-100/5 mt-10 ml-10 p-10 w-full rounded-md backdrop-blur-sm">
                 <h1 className="flex justify-center text-slate-300 font-bold text-2xl text-slate-100 mb-8">
                   Sign In
@@ -54,7 +55,8 @@ function LoginPage() {
                     className="h-5 w-5 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor">
+                    stroke="currentColor"
+                  >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -74,7 +76,8 @@ function LoginPage() {
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 text-gray-400"
                     viewBox="0 0 20 20"
-                    fill="currentColor">
+                    fill="currentColor"
+                  >
                     <path
                       fill-rule="evenodd"
                       d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
@@ -94,7 +97,8 @@ function LoginPage() {
 
                 <button
                   type="submit"
-                  className="block w-full mt-4 py-2 rounded-md text-slate-300 mb-10 font-semibold mb-2 bg-slate-100/5 hover:bg-slate-100/10">
+                  className="block w-full mt-4 py-2 rounded-md text-slate-300 mb-10 font-semibold mb-2 bg-slate-100/5 hover:bg-slate-100/10"
+                >
                   <Link to="/HomePage">SIGN IN</Link>
                 </button>
 
@@ -103,7 +107,8 @@ function LoginPage() {
                   Don't have an account?&nbsp;
                   <a
                     href="/register"
-                    className="text-lg text-slate-300 hover:text-slate-200 cursor-pointer">
+                    className="text-lg text-slate-300 hover:text-slate-200 cursor-pointer"
+                  >
                     <Link to="/register">SIGN UP</Link>
                   </a>{" "}
                   now!
