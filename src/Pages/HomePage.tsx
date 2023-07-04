@@ -4,68 +4,22 @@ import NavBar from "../components/NavBar";
 function HomePage() {
   return (
     <>
-      <div className="bg">
+      <div className="bg w-100 h-screen">
         <div className="bg-black/60">
           <NavBar />
-          <div className=" grid gap-10 grid-cols-3 mb-5">
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 1
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 2
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 3
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 1
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 2
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 3
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 1
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 2
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 3
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 1
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 2
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 3
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 1
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 2
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 3
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 1
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 2
-            </div>
-            <div className="text-slate-300 bg-slate-100/5 m-10 p-10 w-full h-full rounded-md backdrop-blur-sm">
-              Day 3
-            </div>
           </div>
-          <Footer />
+          <div className='  flex items-center justify-center mt-56'>
+        <div className='w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white'>
+          <p className='text-xl'>Welcome</p>
+          <p className='text-base'>Lets Explore...</p>
         </div>
-      </div>
+
+        
+          <div className="absolute bottom-0 w-full"> 
+          <Footer /></div>
+        </div>
+        </div>
+      
     </>
   );
 }
