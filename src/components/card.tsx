@@ -11,7 +11,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Kathmandu</h1>
         <p className="text-xs p-1">
           Nepal's capital, is set in a valley surrounded by the Himalayan
@@ -22,7 +22,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Lumbini</h1>
         <p className="text-xs p-1">
           It is the holiest places of one of the world's great religions, and
@@ -33,7 +33,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Chitwan</h1>
         <p className="text-xs p-1">
           Rich flora and fauna and is home to one of the last populations of
@@ -44,7 +44,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Manang</h1>
         <p className="text-xs p-1">
           The Manang Valley is the paradise for trekking, tourist destination,
@@ -55,7 +55,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Mustang</h1>
         <p className="text-xs p-1">
           {" "}
@@ -66,7 +66,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Bandipur</h1>
         <p className="text-xs p-1">
           Bandipur National Park second highest Tiger population in India.
@@ -77,7 +77,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Jiri</h1>
         <p className="text-xs p-1">
           Jiri is popularly known as the Switzerland of Nepal as it is a small
@@ -87,7 +87,7 @@ function Card() {
           Book Now
         </button>
       </div>
-      <div className="m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
+      <div className="text-white m-1 w-48 h-40 border border-teal-700 border-1 backdrop-blur flex flex-col p-1">
         <h1>Rara</h1>
         <p className="text-xs p-1">
           Rara Lake also known as Mahendra Lake is the largest fresh water lake
