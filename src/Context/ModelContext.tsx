@@ -18,7 +18,7 @@ export const ModelContextProvider = ({ children }: { children: any }) => {
   };
 
   const handleNumber = (num: number) => {
-    if (num === 10) {
+    if (num === 1) {
       setValue(true);
     }
     setNumber(num);
