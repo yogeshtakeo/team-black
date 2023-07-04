@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
-import Card from "./card";
+import { useContext } from "react";
 import { ModelContext } from "../Context/ModelContext";
 
 function NavBar() {
   let {
-    navDestinations: { status, updateStatus, number, updateNumber },
+    navDestinations: { updateStatus, number, updateNumber },
   } = useContext(ModelContext);
 
   console.log("Number", number);
