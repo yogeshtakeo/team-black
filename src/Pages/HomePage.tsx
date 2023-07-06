@@ -1,7 +1,7 @@
 // import React from 'react'
 import { useContext } from "react";
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 import Card from "../components/card";
 import { ModelContext } from "../Context/ModelContext";
 function HomePage() {
