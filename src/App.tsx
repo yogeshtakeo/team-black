@@ -5,9 +5,11 @@ import HomePage from "./Pages/HomePage";
 
 import { ModelContextProvider } from "./Context/ModelContext";
 import BlogPage from "./Pages/BlogPage";
+import DataProvider from "./Context/DataContext";
 
 function App() {
   return (
+    <DataProvider>
     <ModelContextProvider>
       <Routes>
         <Route path="/" element={<LoginPage />}></Route>
@@ -17,6 +19,7 @@ function App() {
         <Route path="/Blogpage" element={<BlogPage />}></Route>
       </Routes>
     </ModelContextProvider>
+    </DataProvider>
   );
 }
 

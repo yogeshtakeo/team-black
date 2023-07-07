@@ -11,11 +11,13 @@ function HomePage() {
 
   return (
     <>
-      <div className="bg  relative w-full h-screen">
-        <div className=" z-10 fixed top-0 left-0 right-0 z-index-100 bg-black/60 w-full  ">
+      <div className="bg">
+      <div className="h-full bg-black/60">
+        <div className=" z-10 fixed top-0 left-0 right-0 z-index-100 w-full  ">
           <NavBar />
         </div>
-        <main className="z-1 w-full h-full">
+        <div className="p-24">
+        <main className="m-4 z-1 w-full h-full">
           <div className="flex items-center justify-center flex-col w-full h-full">
             <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
               <p className="text-xl">Welcome</p>
@@ -23,12 +25,35 @@ function HomePage() {
             </div>
           </div>
         </main>
+        <main className="m-4 z-1 w-full h-full">
+          <div className="flex items-center justify-center flex-col w-full h-full">
+            <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
+              <p className="text-xl">Welcome</p>
+              <p className="text-base">Lets Explore...</p>
+            </div>
+          </div>
+        </main> <main className="m-4 z-1 w-full h-full">
+          <div className="flex items-center justify-center flex-col w-full h-full">
+            <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
+              <p className="text-xl">Welcome</p>
+              <p className="text-base">Lets Explore...</p>
+            </div>
+          </div>
+        </main><main className="m-4 z-1 w-full h-full">
+          <div className="flex items-center justify-center flex-col w-full h-full">
+            <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
+              <p className="text-xl">Welcome</p>
+              <p className="text-base">Lets Explore...</p>
+            </div>
+          </div>
+        </main>
+        </div>
 
-        <div className=" z-10 fixed bottom-0 left-0 right-0 bottom-0 w-full">
+        <div  >
           <Footer />
         </div>
         {status && <Card />}
-      </div>
+      </div></div>
     </>
   );
 }

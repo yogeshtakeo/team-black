@@ -99,7 +99,7 @@ function LoginPage() {
                   type="submit"
                   className="block w-full mt-4 py-2 rounded-md text-slate-300 mb-10 font-semibold mb-2 bg-slate-100/5 hover:bg-slate-100/10"
                 >
-                  <Link to="/HomePage">SIGN IN</Link>
+                  <Link to="/HomePage">Sign In</Link>
                 </button>
 
                 {/* </div> */}
@@ -107,9 +107,9 @@ function LoginPage() {
                   Don't have an account?&nbsp;
                   <a
                     href="/register"
-                    className="text-lg text-slate-300 hover:text-slate-200 cursor-pointer"
+                    className="text-lg text-slate-300 hover:text-slate-100 cursor-pointer"
                   >
-                    <Link to="/register">SIGN UP</Link>
+                    <Link to="/register">Sign Up&nbsp;</Link>
                   </a>{" "}
                   now!
                 </p>
