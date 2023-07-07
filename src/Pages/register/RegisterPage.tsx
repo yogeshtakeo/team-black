@@ -47,9 +47,10 @@ function RegisterPage() {
     }
   }
   function HandleRegister() {
-    setUserInput({ userName: {name}, email: {email}, password: {password} });
-    // console.log(user.userDetail.userName)
-    console.log(name)
+    event.preventDefault();
+    setUserInput({userDetail: { userName: {name}, email: {email}, password: {password} }});
+  
+    console.log({user})
     HandleEmail();
     HandlePassword();
 

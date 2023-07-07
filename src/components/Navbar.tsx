@@ -19,7 +19,7 @@ function NavBar() {
         </div>
         <div className="flex items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md">
           <p>&nbsp;</p>
-          <input type = 'text' name = 'search' placeholder = 'Search...' className='ml-2 l-2 outline-none border-none bg-slate-100/0 text-slate-300'/>
+          <input type = 'text' name = 'search' placeholder = 'Search...' className='ml-2 l-2 outline-none border-none bg-slate-100/0 text-slate-200'/>
           </div>
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">

@@ -9,12 +9,12 @@ interface IUser {
         password: string;
         id: string;
       };
-      blogDetail: {
-        author: string;
-        title: string;
-        content: string;
-        postedDate: string;
-      };
+      // blogDetail: {
+      //   author: string;
+      //   title: string;
+      //   content: string;
+      //   postedDate: string;
+      // };
 }
 interface UserContextType {
     user: IUser;
@@ -31,12 +31,12 @@ export const UserContext = createContext<UserContextType>({
       password: "",
       id: "",
     },
-    blogDetail: {
-        author: "",
-        title: "",
-        content: "",
-        postedDate: "",
-      },
+    // blogDetail: {
+    //     author: "",
+    //     title: "",
+    //     content: "",
+    //     postedDate: "",
+    //   },
     },
       setUserInput: () => {}
   })
@@ -51,12 +51,12 @@ function DataProvider({children}: {children: ReactNode}) {
             password: "",
             id: "",
           },
-          blogDetail: {
-              author: "",
-              title: "",
-              content: "",
-              postedDate: "",
-            },
+          // blogDetail: {
+          //     author: "",
+          //     title: "",
+          //     content: "",
+          //     postedDate: "",
+          //   },
        
       }
       )
