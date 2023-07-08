@@ -14,6 +14,7 @@ const state = {
 function BlogPage() {
   const [title, setTitle] = useState("");
   const [blog, setBlog] = useState("");
+  const [filterCriteria, setFilterCriteria] = useState("");
 
   console.log(title);
   console.log(blog);
@@ -32,22 +33,22 @@ function BlogPage() {
     };
 
     setAddBlogs((prevList) => [...prevList, newItem]);
-    setTitle("");
     setBlog("");
+    setTitle("");
   };
 
   return (
     <>
       <div className="bg">
         <div className="bg-black/60 w-full">
-          <div>
+          <div className="z-10 fixed top-0 left-0 right-0 z-index-100 w-full">
             <NavBar />
           </div>
 
           <div>
-            <div className="pt-16">
+            <div className="pt-20">
               <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900">
-                <form className="bg-slate-900/30  p-10 w-full rounded-md backdrop-blur-sm">
+                <form className="bg-slate-200/5 ml-10 p-10 w-full rounded-md backdrop-blur-sm">
                   <h1 className="flex justify-center text-slate-300 font-bold text-2xl text-slate-100 mb-8">
                     Create Blog
                   </h1>
@@ -60,6 +61,7 @@ function BlogPage() {
                       type="text"
                       name="title"
                       id="title"
+                      value={title}
                       placeholder="Enter Title"
                     />
                   </div>
@@ -71,17 +73,37 @@ function BlogPage() {
                       id="blogContent"
                       name="blogContent"
                       className="w-full pl-2 outline-none border-none bg-slate-100/0 text-slate-300"
-                      placeholder="Your blog here"></textarea>
+                      placeholder="Your blog here"
+                      value={blog}></textarea>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  {/* <label className="items-center py-2 px-3 rounded-md mb-4 text-slate-300">Filter by :</label> */}
+
+                  <div className="grid grid-cols-3 gap-4">
+                    <select
+                      value={filterCriteria}
+                      onChange={(event) =>
+                        setFilterCriteria(event.target.value)
+                      }
+                      id="filterCriteria"
+                      name="filterCriteria"
+                      className=" bg-slate-200/5 text-slate-300 items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md mb-4">
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Filter by{" "}
+                      </option>
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Author
+                      </option>
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Date
+                      </option>
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Title
+                      </option>
+                    </select>
                     <button
                       type="button"
-                      data-te-toggle="modal"
-                      data-te-target="#staticBackdrop"
-                      data-te-ripple-init
-                      data-te-ripple-color="light"
-                      className="block w-full mt-4 py-2 rounded-md text-slate-300 mb-10 font-semibold mb-2 bg-slate-900/30 hover:bg-slate-100/10">
+                      className="block w-full  rounded-md text-slate-300 font-semibold mb-4 bg-slate-100/5 hover:bg-slate-100/10">
                       Preview
                     </button>
 
@@ -91,7 +113,7 @@ function BlogPage() {
                         e.preventDefault();
                         HandleBlog(title, blog);
                       }}
-                      className="block w-full mt-4 mr-4 py-2 rounded-md text-slate-300 mb-10 font-semibold mb-2 bg-slate-900/30 hover:bg-slate-100/10">
+                      className="block w-full rounded-md text-slate-300 font-semibold mb-4 bg-slate-100/5 hover:bg-slate-100/10">
                       Post
                     </button>
                   </div>
@@ -104,7 +126,7 @@ function BlogPage() {
                     <>
                       <div
                         key={eachblog.id}
-                        className="bg-slate-900/30 m-10 p-10 rounded-md backdrop-blur-sm">
+                        className="bg-slate-200/5 m-10 p-10 rounded-md backdrop-blur-sm">
                         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900">
                           <div className="flex items-center justify-between">
                             <span className="text-sm pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
@@ -159,7 +181,7 @@ function BlogPage() {
                     <>
                       <div
                         key={eachblog.id}
-                        className="bg-slate-900/30 m-10 p-10 rounded-md backdrop-blur-sm">
+                        className="bg-slate-400/5 m-10 p-10 rounded-md backdrop-blur-sm">
                         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900">
                           <div className="flex items-center justify-between">
                             <span className="text-sm pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
@@ -191,9 +213,9 @@ function BlogPage() {
                                 href="#"
                                 className="flex items-center">
                                 <img
-                                  src="https://source.unsplash.com/50x50/?portrait"
+                                  src="https://api.dicebear.com/5.x/bottts-neutral/svg?seed=10000"
                                   alt="avatar"
-                                  className="object-cover w-10 h-10 mx-4 rounded-full dark:bg-slate-500"
+                                  className="w-10 h-10 mx-4 rounded-full"
                                 />
 
                                 <span className="hover:underline pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
