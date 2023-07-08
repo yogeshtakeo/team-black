@@ -3,7 +3,7 @@
 function NavBar() {
   return (
     <>
-        <nav className="bg-slate-900/20 backdrop-blur-sm">
+        <nav className="bg-slate-500/10 backdrop-blur-sm">
   <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div className="relative flex h-16 items-center justify-between">
 
@@ -19,15 +19,15 @@ function NavBar() {
         </div>
         <div className="flex items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md">
           <p>&nbsp;</p>
-          <input type = 'text' name = 'search' placeholder = 'Search...' className='ml-2 l-2 outline-none border-none bg-slate-100/0 text-slate-200'/>
+          <input type = 'text' name = 'search' placeholder = 'Search...' className='ml-2 l-2 outline-none border-none bg-slate-100/0 text-slate-300'/>
           </div>
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
             <a href="#" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">My Trips</a>
-            <a href="/Blogpage" className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Blogs</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Activities</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Destinations</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Meet the Team</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Activities</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Destinations</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
 
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
         <button type="button" className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
