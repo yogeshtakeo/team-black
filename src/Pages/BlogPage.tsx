@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 
-import NavBar from "../components/Navbar";
+import NavBar from "../components/navi-bar";
 import { useState } from "react";
 import { blog_data } from "../data";
 const timestamp = new Date().getTime();

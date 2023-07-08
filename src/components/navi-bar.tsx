@@ -3,7 +3,7 @@
 function NavBar() {
   return (
     <>
-      <nav className=" relative bg-slate-500/10 backdrop-blur-sm">
+      <nav className="bg-slate-500/10 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="flex flex-1 items-center justify-between">
@@ -51,26 +51,25 @@ function NavBar() {
                     My Trips
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                    Meet the Team
+                    href="/blogpage"
+                    className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    Blog
                   </a>
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                     Activities
                   </a>
-                  <button
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    onClick={updateStatus}>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                     Destinations
-                  </button>
-
-                  <button
-                    onClick={handleNumberClick}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  </a>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                     Calendar
-                  </button>
+                  </a>
 
                   <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <button
