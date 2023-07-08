@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 
-import NavBar from "../components/Navbar";
+import NavBar from "../components/navi-bar";
 import { useState } from "react";
 import { blog_data } from "../data";
 const timestamp = new Date().getTime();
@@ -33,8 +33,8 @@ function BlogPage() {
     };
 
     setAddBlogs((prevList) => [...prevList, newItem]);
-    setBlog("")
-    setTitle("")
+    setBlog("");
+    setTitle("");
   };
 
   return (
@@ -47,7 +47,7 @@ function BlogPage() {
 
           <div>
             <div className="pt-20">
-              <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900">
+              <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900/60">
                 <form className="bg-slate-200/5 ml-10 p-10 w-full rounded-md backdrop-blur-sm">
                   <h1 className="flex justify-center text-slate-300 font-bold text-2xl text-slate-100 mb-8">
                     Create Blog
@@ -64,7 +64,7 @@ function BlogPage() {
                       placeholder="Enter Title"
                     />
                   </div>
-                
+
                   <div className="flex items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md mb-4">
                     <textarea
                       onChange={(event) => setBlog(event.target.value)}
@@ -72,28 +72,39 @@ function BlogPage() {
                       name="blogContent"
                       className="w-full pl-2 outline-none border-none bg-slate-100/0 text-slate-300"
                       placeholder="Your blog here"
-                      value={blog}></textarea>
+                      value={blog}
+                    ></textarea>
                   </div>
-                  
-          {/* <label className="items-center py-2 px-3 rounded-md mb-4 text-slate-300">Filter by :</label> */}
-          
-            
-          
-          
-        
+
+                  {/* <label className="items-center py-2 px-3 rounded-md mb-4 text-slate-300">Filter by :</label> */}
 
                   <div className="grid grid-cols-3 gap-4">
-                    
-                  <select value = {filterCriteria} onChange={event=> setFilterCriteria(event.target.value)} id="filterCriteria" name="filterCriteria" className=" bg-slate-200/5 text-slate-300 items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md mb-4">
-                  <option className="bg-slate-700 text-slate-300 items-center">Filter by  </option>
-                  <option className="bg-slate-700 text-slate-300 items-center">Author</option>
-                  <option className="bg-slate-700 text-slate-300 items-center">Date</option>
-                  <option className="bg-slate-700 text-slate-300 items-center">Title</option>
-                  </select>
-                  <button
+                    <select
+                      value={filterCriteria}
+                      onChange={(event) =>
+                        setFilterCriteria(event.target.value)
+                      }
+                      id="filterCriteria"
+                      name="filterCriteria"
+                      className=" bg-slate-200/5 text-slate-300 items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md mb-4"
+                    >
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Filter by{" "}
+                      </option>
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Author
+                      </option>
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Date
+                      </option>
+                      <option className="bg-slate-700 text-slate-300 items-center">
+                        Title
+                      </option>
+                    </select>
+                    <button
                       type="button"
-                      
-                      className="block w-full  rounded-md text-slate-300 font-semibold mb-4 bg-slate-100/5 hover:bg-slate-100/10">
+                      className="block w-full  rounded-md text-slate-300 font-semibold mb-4 bg-slate-100/5 hover:bg-slate-100/10"
+                    >
                       Preview
                     </button>
 
@@ -103,7 +114,8 @@ function BlogPage() {
                         e.preventDefault();
                         HandleBlog(title, blog);
                       }}
-                      className="block w-full rounded-md text-slate-300 font-semibold mb-4 bg-slate-100/5 hover:bg-slate-100/10">
+                      className="block w-full rounded-md text-slate-300 font-semibold mb-4 bg-slate-100/5 hover:bg-slate-100/10"
+                    >
                       Post
                     </button>
                   </div>
@@ -116,12 +128,13 @@ function BlogPage() {
                     <>
                       <div
                         key={eachblog.id}
-                        className="bg-slate-200/5 m-10 p-10 rounded-md backdrop-blur-sm">
-                        <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900">
-                          <div className="flex items-center justify-between">
+                        className=" m-10 p-10 rounded-md backdrop-blur-sm"
+                      >
+                        <div className=" max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm">
+                          <div className="bg-black/60 flex items-center justify-between">
                             <span className="text-sm pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
                               {state.date}
-                            </span> 
+                            </span>
                           </div>
 
                           <div className="mt-3">
@@ -138,7 +151,8 @@ function BlogPage() {
                             <a
                               rel="noopener noreferrer"
                               href="#"
-                              className="hover:underline pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
+                              className="hover:underline pl-2 outline-none border-none bg-slate-100/0 text-slate-300"
+                            >
                               Read more
                             </a>
 
@@ -146,7 +160,8 @@ function BlogPage() {
                               <a
                                 rel="noopener noreferrer"
                                 href="#"
-                                className="flex items-center">
+                                className="flex items-center"
+                              >
                                 <img
                                   src="https://source.unsplash.com/50x50/?portrait"
                                   alt="avatar"
@@ -171,7 +186,8 @@ function BlogPage() {
                     <>
                       <div
                         key={eachblog.id}
-                        className="bg-slate-400/5 m-10 p-10 rounded-md backdrop-blur-sm">
+                        className="bg-slate-400/5 m-10 p-10 rounded-md backdrop-blur-sm"
+                      >
                         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900">
                           <div className="flex items-center justify-between">
                             <span className="text-sm pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
@@ -193,7 +209,8 @@ function BlogPage() {
                             <a
                               rel="noopener noreferrer"
                               href="#"
-                              className="hover:underline pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
+                              className="hover:underline pl-2 outline-none border-none bg-slate-100/0 text-slate-300"
+                            >
                               Read more
                             </a>
 
@@ -201,7 +218,8 @@ function BlogPage() {
                               <a
                                 rel="noopener noreferrer"
                                 href="#"
-                                className="flex items-center">
+                                className="flex items-center"
+                              >
                                 <img
                                   src="https://api.dicebear.com/5.x/bottts-neutral/svg?seed=10000"
                                   alt="avatar"
