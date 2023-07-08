@@ -19,7 +19,7 @@ function HomePage() {
         <div className="p-24">
         <main className="m-4 z-1 w-full h-full">
           <div className="flex items-center justify-center flex-col w-full h-full">
-            <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
+            <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
               <p className="text-xl">Welcome</p>
               <p className="text-base">Lets Explore...</p>
             </div>
@@ -27,21 +27,21 @@ function HomePage() {
         </main>
         <main className="m-4 z-1 w-full h-full">
           <div className="flex items-center justify-center flex-col w-full h-full">
-            <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
+            <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
               <p className="text-xl">Welcome</p>
               <p className="text-base">Lets Explore...</p>
             </div>
           </div>
         </main> <main className="m-4 z-1 w-full h-full">
           <div className="flex items-center justify-center flex-col w-full h-full">
-            <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
+            <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
               <p className="text-xl">Welcome</p>
               <p className="text-base">Lets Explore...</p>
             </div>
           </div>
         </main><main className="m-4 z-1 w-full h-full">
           <div className="flex items-center justify-center flex-col w-full h-full">
-            <div className="w-96 h-52 border border-slate-300 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
+            <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
               <p className="text-xl">Welcome</p>
               <p className="text-base">Lets Explore...</p>
             </div>

@@ -1,17 +1,21 @@
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styleLogin.css";
 import Footer from "../components/Footer";
 import NavBar1 from "../components/NavBar1";
+import { UserContext } from "../Context/DataContext";
+
 
 function LoginPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const transferredState = location.state;
   const [errorMessage, setErrorMessage] = useState("");
+
+  const { user, setUserInput} = useContext(UserContext);
 
   const initialValues = {
     email: "",
@@ -26,6 +30,9 @@ function LoginPage() {
   const submitHandler = (values: { email: string; password: string }) => {
     if (values.password === transferredState.confirmPassword) {
       navigate("/HomePage");
+      setUserInput({userDetail: { loggedIn: true}});
+      console.log(user.userDetail.loggedIn)
+        
     } else {
       setErrorMessage("Enter correct password");
     }
@@ -36,9 +43,10 @@ function LoginPage() {
       {/* <div className='bg-cover h-100 bg-[url("https://images.pexels.com/photos/4028822/pexels-photo-4028822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")]  '> */}
       <div className="bg">
         <div className="bg-black/60">
+          <div className=" z-10 fixed top-0 left-0 right-0 z-index-100 w-full  ">
           <NavBar1 />
-
-          <div className="flex grid grid-cols-3">
+          </div>
+          <div className="flex grid grid-cols-3 pt-16">
             <Formik
               initialValues={initialValues}
               onSubmit={submitHandler}

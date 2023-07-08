@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext, useState, Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import Footer from "../../components/Footer";
 import NavBar1 from "../../components/NavBar1";
 import { UserContext } from "../../Context/DataContext";
+
 
 function RegisterPage() {
   const [password, setPassword] = useState("");
@@ -14,7 +15,7 @@ function RegisterPage() {
   const [errorPasswordMessage, setErrorPasswordMessage] = useState("");
   const [errorIncorrectPasswordMessage, setErrorIncorrectPasswordMessage] = useState("");
 
-  const { user, setUserInput } = useContext(UserContext);
+  
 
   const navigate = useNavigate();
   const HandleEmail = () => {
@@ -46,6 +47,11 @@ function RegisterPage() {
       setErrorIncorrectPasswordMessage("password didn't match");
     }
   }
+
+  
+  
+  const { user, setUserInput} = useContext(UserContext);
+
   function HandleRegister() {
     event.preventDefault();
     setUserInput({userDetail: { userName: {name}, email: {email}, password: {password} }});
@@ -62,7 +68,7 @@ function RegisterPage() {
     <>
       <div className="bg">
         <div className="h-full bg-black/60">
-          <div className="z-10 fixed top-0 left-0 right-0 z-index-100 w-full"><NavBar1 /></div>
+          <div className=" z-10 fixed top-0 left-0 right-0 z-index-100 w-full  "><NavBar1 /></div>
           <div className=" grid grid-cols-3 pt-16">
             <form className="bg-slate-100/5 mt-10 ml-10 p-10 w-full rounded-md backdrop-blur-sm">
               <h1 className="flex justify-center text-slate-300 font-bold text-2xl text-slate-100 mb-8">
