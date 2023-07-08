@@ -32,8 +32,8 @@ function BlogPage() {
     };
 
     setAddBlogs((prevList) => [...prevList, newItem]);
-    // setBlog("");
-    // setTitle("");
+    setTitle("");
+    setBlog("");
   };
 
   return (
@@ -54,6 +54,7 @@ function BlogPage() {
 
                   <div className="flex items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md mb-4">
                     <input
+                      value={title}
                       onChange={(event) => setTitle(event.target.value)}
                       className="pl-2 outline-none border-none bg-slate-100/0 text-slate-300"
                       type="text"
@@ -65,21 +66,12 @@ function BlogPage() {
 
                   <div className="flex items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md mb-4">
                     <textarea
+                      value={blog}
                       onChange={(event) => setBlog(event.target.value)}
                       id="blogContent"
                       name="blogContent"
                       className="w-full pl-2 outline-none border-none bg-slate-100/0 text-slate-300"
                       placeholder="Your blog here"></textarea>
-                  </div>
-
-                  <div className="flex items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md mb-4">
-                    <input
-                      className="pl-2 outline-none border-none bg-slate-100/0 text-slate-300"
-                      type="text"
-                      name="title"
-                      id="title"
-                      placeholder="Enter keywords"
-                    />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
