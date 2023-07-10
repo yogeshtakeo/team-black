@@ -17,15 +17,7 @@ function HomePage() {
             <NavBar />
           </div>
           <div className="p-24">
-            <main className="m-4 z-1 w-full h-full">
-              <div className="flex items-center justify-center flex-col w-full h-full">
-                <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
-                  <p className="text-xl">Welcome</p>
-                  <p className="text-base">Lets Explore...</p>
-                </div>
-              </div>
-            </main>
-            <main className="m-4 z-1 w-full h-full">
+            <main className="m-4 z-1 w-full h-screen">
               <div className="flex items-center justify-center flex-col w-full h-full">
                 <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
                   <p className="text-xl">Welcome</p>
@@ -33,25 +25,9 @@ function HomePage() {
                 </div>
               </div>
             </main>{" "}
-            <main className="m-4 z-1 w-full h-full">
-              <div className="flex items-center justify-center flex-col w-full h-full">
-                <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
-                  <p className="text-xl">Welcome</p>
-                  <p className="text-base">Lets Explore...</p>
-                </div>
-              </div>
-            </main>
-            <main className="m-4 z-1 w-full h-full">
-              <div className="flex items-center justify-center flex-col w-full h-full">
-                <div className="bg-slate-100/5 w-96 h-52 rounded border border-slate-300/5 border-1 backdrop-blur flex flex-col items-center justify-center text-white">
-                  <p className="text-xl">Welcome</p>
-                  <p className="text-base">Lets Explore...</p>
-                </div>
-              </div>
-            </main>
           </div>
 
-          <div>
+          <div className="bottom-0 w-full">
             <Footer />
           </div>
           {status && <Card />}
