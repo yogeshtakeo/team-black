@@ -47,7 +47,7 @@ const Searchpage = () => {
                 {filter.map((content: Content, index) => (
                   <div
                     key={index}
-                    className="m-8 max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900"
+                    className="m-8 max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900/60"
                   >
                     <div className="mt-3">
                       <a className="text-2xl font-bold hover:underline pl-2 outline-none border-none bg-slate-100/0 text-slate-300">

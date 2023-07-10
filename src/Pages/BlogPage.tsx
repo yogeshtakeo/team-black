@@ -188,7 +188,7 @@ function BlogPage() {
                         key={eachblog.id}
                         className="bg-slate-400/5 m-10 p-10 rounded-md backdrop-blur-sm"
                       >
-                        <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900">
+                        <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm dark:bg-slate-900/60">
                           <div className="flex items-center justify-between">
                             <span className="text-sm pl-2 outline-none border-none bg-slate-100/0 text-slate-300">
                               {eachblog.posted_date}
