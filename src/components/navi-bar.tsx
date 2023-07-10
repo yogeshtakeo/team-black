@@ -1,13 +1,20 @@
-// import React from 'react'
+import { React, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import Card from "./card";
 
 function NavBar() {
   const navigate = useNavigate();
 
-  const handle = () => {
+  const handleSearch = () => {
     navigate("/SearchPage");
+  };
+
+  const [handle, setHandle] = useState(false);
+
+  const handleCard = () => {
+    setHandle(!handle);
   };
 
   return (
@@ -44,7 +51,7 @@ function NavBar() {
               </div>
               <div className="flex items-center border-2 border-slate-100/10 hover:border-slate-100/20 py-2 px-3 rounded-md">
                 <p>&nbsp;</p>
-                <div onClick={handle}>
+                <div onClick={handleSearch}>
                   <FontAwesomeIcon icon={faSearch} />
                 </div>
               </div>
@@ -73,8 +80,10 @@ function NavBar() {
                 <a
                   href="#"
                   className="text-gray-300 hover:bg-gray-300/10 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  onClick={handleCard}
                 >
                   Destinations
+                  {handle ? <Card /> : ""}
                 </a>
                 <a
                   href="#"
