@@ -1,17 +1,21 @@
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styleLogin.css";
 import Footer from "../components/Footer";
 import NavBar1 from "../components/NavBar1";
+import { UserContext } from "../Context/DataContext";
+
 
 function LoginPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const transferredState = location.state;
   const [errorMessage, setErrorMessage] = useState("");
+
+  const { user, setUserInput} = useContext(UserContext);
 
   const initialValues = {
     email: "",
@@ -26,6 +30,9 @@ function LoginPage() {
   const submitHandler = (values: { email: string; password: string }) => {
     if (values.password === transferredState.confirmPassword) {
       navigate("/HomePage");
+      setUserInput({userDetail: { loggedIn: true}});
+      console.log(user.userDetail.loggedIn)
+        
     } else {
       setErrorMessage("Enter correct password");
     }
@@ -36,9 +43,10 @@ function LoginPage() {
       {/* <div className='bg-cover h-100 bg-[url("https://images.pexels.com/photos/4028822/pexels-photo-4028822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")]  '> */}
       <div className="bg">
         <div className="bg-black/60">
+          <div className=" z-10 fixed top-0 left-0 right-0 z-index-100 w-full  ">
           <NavBar1 />
-
-          <div className="flex grid grid-cols-3">
+          </div>
+          <div className="flex grid grid-cols-3 pt-16">
             <Formik
               initialValues={initialValues}
               onSubmit={submitHandler}
@@ -99,7 +107,7 @@ function LoginPage() {
                   type="submit"
                   className="block w-full mt-4 py-2 rounded-md text-slate-300 mb-10 font-semibold mb-2 bg-slate-100/5 hover:bg-slate-100/10"
                 >
-                  <Link to="/HomePage">SIGN IN</Link>
+                  <Link to="/HomePage">Sign In</Link>
                 </button>
 
                 {/* </div> */}
@@ -107,9 +115,9 @@ function LoginPage() {
                   Don't have an account?&nbsp;
                   <a
                     href="/register"
-                    className="text-lg text-slate-300 hover:text-slate-200 cursor-pointer"
+                    className="text-lg text-slate-300 hover:text-slate-100 cursor-pointer"
                   >
-                    <Link to="/register">SIGN UP</Link>
+                    <Link to="/register">Sign Up&nbsp;</Link>
                   </a>{" "}
                   now!
                 </p>
